@@ -7,7 +7,10 @@ class EjemplosController extends Controller{
         $this->render('index');
     }
     
-    
+    public function actionCreate(){
+        
+        $this->render('create');
+    }
 }
 
 
