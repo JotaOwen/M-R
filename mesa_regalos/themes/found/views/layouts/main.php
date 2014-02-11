@@ -18,6 +18,14 @@
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.min.css" />
         
+        <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prism.css" rel="stylesheet">
+        <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/chosen.css" rel="stylesheet">
+        
+        <!--<link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/datatables/data-tables-style.css" rel="stylesheet">-->
+        
+        <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/datatables/data-table.css" rel="stylesheet">
+        <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/datatables/TableTools.css" rel="stylesheet">  
+        
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/vendor/jquery.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/vendor/modernizr.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/foundation/foundation.js"></script>
@@ -25,6 +33,15 @@
         <script>
             $(document).foundation();
         </script>
+        
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/jquery.textareaCounter.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/elrte.min.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/elrte.en.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/select2.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/jquery.dataTables.min.js"></script>
+        
+        
+        
     </head>
 
     <body>
@@ -152,6 +169,28 @@
             </div>
         </div>
         
+      <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/chosen.jquery.js" type="text/javascript"></script>
+      <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/prism.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript">
+        var config = {
+            '.chosen-select' : {},
+            '.chosen-select-deselect' : {
+                allow_single_deselect : true
+            },
+            '.chosen-select-no-single' : {
+                disable_search_threshold : 10
+            },
+            '.chosen-select-no-results' : {
+                no_results_text : 'No se encontraron Resultados!'
+            },
+            '.chosen-select-width' : {
+                width : "95%"
+            }
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+      </script>
         
     </body>
 </html>

@@ -1,17 +1,21 @@
 <?php
 
-class EjemplosController extends Controller{
-    
-    public function actionIndex(){
-        
+class EjemplosController extends Controller {
+
+    public function actionIndex() {
+
         $this->render('index');
     }
-    
-    public function actionCreate(){
-        
+
+    public function actionCreate() {
+
         $this->render('create');
     }
+
+    public function actionForms() {
+
+        $this->render('forms');
+    }
+
 }
-
-
 ?>

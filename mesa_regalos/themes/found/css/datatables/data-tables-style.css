@@ -1,0 +1,100 @@
+.dataTables_wrapper {
+    clear: both;
+    position: relative;
+}
+
+.dataTables_length {
+    background-color: rgba(220, 220, 220, 0.3);
+    border-bottom: 1px solid #D1D7DF;
+    float: left;
+    width: 50%;
+}
+
+.dataTables_wrapper label {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.dataTables_filter {
+    background-color: rgba(220, 220, 220, 0.3);
+    border-bottom: 1px solid #D1D7DF;
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+.dataTables_wrapper .dataTables_info {
+    height: 20px;
+    line-height: 20px;
+    padding: 15px 10px;
+}
+.dataTables_info {
+    float: left;
+    width: auto;
+}
+
+.dataTables_wrapper .pagination {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px;
+}
+.dataTables_paginate {
+    float: right;
+    text-align: right;
+}
+.pagination {
+    line-height: 10px;
+    margin: 0 0 15px;
+}
+.pagination {
+    margin: 20px 0;
+}
+
+.dataTables_wrapper .pagination {
+    line-height: 30px;
+}
+.dataTables_paginate {
+    text-align: right;
+}
+.pagination {
+    line-height: 10px;
+}
+
+.pagination ul > li {
+    display: inline;
+}
+li {
+    line-height: 20px;
+}
+.dataTables_wrapper .pagination {
+    line-height: 30px;
+}
+.dataTables_paginate {
+    text-align: right;
+}
+.pagination {
+    line-height: 10px;
+}
+
+.pagination ul {
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+ul, ol {
+    margin: 0 0 10px 25px;
+    padding: 0;
+}
+.dataTables_wrapper .pagination {
+    line-height: 30px;
+}
+.dataTables_paginate {
+    text-align: right;
+}
+.pagination {
+    line-height: 10px;
+}
