@@ -61,13 +61,25 @@
     padding: 10px;
 }
 
-.dataTables_length select, .dataTables_filter input {
+.dataTables_length select {
     padding: 5px 3px;
     border: #b1b9c2 1px solid;
     background: #fff url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/input-boxt.png') repeat-x top;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    width: 60px;
 }
+
+.dataTables_filter input {
+    padding: 5px 3px;
+    border: #b1b9c2 1px solid;
+    background: #fff url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/input-boxt.png') repeat-x top;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 150px;
+    float: right;
+}
+
 
 .dataTables_filter {
     width: 50%;
@@ -76,6 +88,10 @@
     padding: 10px;
 }
 
+.dataTables_filter label {
+
+    line-height: 2.5;
+}
 .dataTables_info {
     width: 40%;
     float: left;

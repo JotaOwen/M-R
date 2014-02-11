@@ -6,15 +6,19 @@
     }
     $(document).on('ready',function() {
         
+        
+        
+        
+        
         var oTable1;
         $(document).ready(function() {
             oTable1 = $('table[id="table_id"]')
                 .bind('processing',
                     function (e, oSettings, bShow) {
                         if (bShow) {
-                            $('table[id="table_id"]').block();
+                            //$('table[id="table_id"]').block();
                         } else {
-                            $('table[id="table_id"]').unblock();
+                            //$('table[id="table_id"]').unblock();
                         }})
                 .dataTable( {
                 "aoColumns": [ 
@@ -30,7 +34,7 @@
                 }
                 
             });
-            $('div[id="table_id_length"] select').addClass('span2');
+            $('div[id="table_id_length"] select').addClass('large-6 columns');
             $('div[id="table_id_paginate"]').addClass('pagination');
         });
     
@@ -107,6 +111,19 @@ $this->pageTitle = Yii::app()->name;
     <option>Polar Bear</option>
     <option>Spectacled Bear</option>
 </select>
+
+                    <textarea id="editor" name="editor" rows="2" class="el-rte auto-resize"></textarea>
+                    <script>
+                       // $('#examenes_laboratorio').elrte({
+                         //   lang: "es",
+                         //   styleWithCSS: false,
+                        //    height: 200,
+                       //     toolbar: 'maxi'
+                      //  });
+                    </script>
+
+
+
 
 <table id="table_id" class="table table-striped table-hover" style="float: left;">
     <div style="height: 30px"></div>

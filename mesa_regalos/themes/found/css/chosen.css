@@ -64,13 +64,15 @@
   margin-right: 26px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 5px;
 }
 .chosen-container-single .chosen-single-with-deselect span {
   margin-right: 38px;
 }
 .chosen-container-single .chosen-single abbr {
   position: absolute;
-  top: 6px;
+  /*top: 6px;*/
+  margin-top: -17px;
   right: 26px;
   display: block;
   width: 12px;
@@ -97,6 +99,7 @@
   width: 100%;
   height: 100%;
   background: url('chosen-sprite.png') no-repeat 0px 2px;
+  margin-top: 5px;
 }
 .chosen-container-single .chosen-search {
   position: relative;
