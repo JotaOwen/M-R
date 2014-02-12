@@ -6,10 +6,6 @@
     }
     $(document).on('ready',function() {
         
-        
-        
-        
-        
         var oTable1;
         $(document).ready(function() {
             oTable1 = $('table[id="table_id"]')

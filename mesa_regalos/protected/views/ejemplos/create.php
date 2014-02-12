@@ -1,6 +1,5 @@
 <script type="text/javascript">
     $(document).on('ready', function() {
-        $("#select").select2();
         $("#address8").select2();
     }); 
 </script>
@@ -35,8 +34,8 @@
                 data-placeholder="Selecciona un Organizadaor"
                 class="chosen-select-no-results"
                 tabindex="17">
-                    <option value="">Selecciona Hotel</option>
-                    <option value="nuevo-hotel">Nuevo Hotel</option>
+                    <option value="">Selecciona </option>
+                    <option value="nuevo-hotel">Nuevo </option>
                 </select>
             </div>
 
