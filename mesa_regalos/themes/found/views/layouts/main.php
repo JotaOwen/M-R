@@ -16,6 +16,7 @@
         <!-- <title>Foundation | Welcome</title> -->
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/normalize.css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" />
         <!--<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.min.css" />-->
         
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prism.css" rel="stylesheet">
@@ -45,10 +46,54 @@
 
         <div class="row">
         
-        
+          
         
         
         <?php //este es el header ?>
+        
+        
+        
+        <!--Codigo anexado del prototipo html-->
+        <div class="row">
+		     <div class="large-12 columns">		
+		        <!--Menu superior-->
+		         <nav class="top-bar" data-topbar="">
+			          <section class="top-bar-section">
+				            <!-- Right Nav Section -->
+				            <ul class="right">
+					              <!--<li class="active"><a href="#">Right Button Active</a></li>-->					              
+					              <li><a href="#">Mi cuenta</a></li>
+					              <li class="divider"></li>
+					              <li><a href="#">Registrarse</a></li>
+					              <li class="divider"></li>
+					              <li><a href="#">Lista de regalos</a></li>
+					              <li class="divider"></li>
+					              <li class="has-dropdown">
+					                <a href="#">Ayuda</a>
+					                <ul class="dropdown">
+					                  <li><a href="#">Faq</a></li>
+					                </ul>
+					              </li>
+					              <li class="divider"></li>                             
+	                            <li class="has-form">
+	                                <div class="row collapse">
+	                                    <div class="large-8 small-9 columns">
+	                                        <input type="text" placeholder="Buscar..." style=" height: 1.95rem;">
+	                                    </div>
+	                                    <div class="large-4 small-3 columns">
+	                                        <a href="#" class="alert button expand">Buscar</a>
+	                                    </div>
+	                                </div>
+	                            </li>
+				            </ul>
+			          </section>
+		        </nav>
+		      </div>
+    	  </div>        
+         <!--Fin Codigo anexado del prototipo html-->
+        
+        
+        <!--Codigo Original NO  ocupo-->
             <div class="row">
                 <div class="large-12 columns">
                     
@@ -118,7 +163,16 @@
               </div>
             </div>
             
-            
+		<!--Codigo Original NO  ocupo-->    
+		
+		
+		
+		<div class="row">
+	      <div class="large-12 columns">
+	        <!--Logotipo -->          
+	          <h1 class="medium-3 columns" id="logo"><a href="#"><span>Logo</span></a></h1>                    
+	      </div>      
+		</div>        
             
             
             <?php //contenido de los demas views ?>
