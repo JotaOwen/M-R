@@ -94,31 +94,31 @@
         
         
         <!--Codigo Original NO  ocupo-->
-            <div class="row">
+           <!-- <div class="row">
                 <div class="large-12 columns">
                     
                     <nav class="top-bar" data-topbar="">
                         <!-- Title -->
-                        <ul class="title-area">
+                       <!-- <ul class="title-area">
                             <li class="name"><h1><a href="#"><?php echo CHtml::encode(Yii::app()->name); ?></a></h1></li>
                             <!-- Mobile Menu Toggle -->
-                            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+                       <!--     <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
                         </ul>
                         <!-- Top Bar Section -->
-                        <section class="top-bar-section">
+                    <!--    <section class="top-bar-section">
                             <!-- Top Bar Left Nav Elements -->
-                            <ul class="left" >
+                     <!--       <ul class="left" >
                                 <li class="divider"></li>
                               <!-- Anchor -->
-                              <li><a href="#">Inicio</a></li>
+                     <!--         <li><a href="#">Inicio</a></li>
                               <li class="divider"></li>
                             </ul>
                             <!-- Top Bar Right Nav Elements -->
-                            <ul class="right">
+                     <!--       <ul class="right">
                                 <!-- Divider -->
-                                <li class="divider"></li>
+                     <!--           <li class="divider"></li>
                                 <!-- Dropdown -->
-                                <li class="has-dropdown not-click"><a href="http://zurb.com">Categorias</a>
+                      <!--          <li class="has-dropdown not-click"><a href="http://zurb.com">Categorias</a>
                                     <ul class="dropdown">
                                         <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
                                         <li><label>Level One</label></li>
@@ -128,7 +128,7 @@
                                         <li><a href="#">Sub-item 3</a></li>
                                         <li class="has-dropdown not-click"><a href="#">Subcategoria</a>
                                             <!-- Nested Dropdown -->
-                                            <ul class="dropdown">
+                          <!--                  <ul class="dropdown">
                                                 <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
                                                 <li><label>Level Two</label></li>
                                                 <li><a href="#">Sub-item 2</a></li>
@@ -141,13 +141,13 @@
                                 </li>
                               <li class="divider"></li>
                               <!-- Anchor -->
-                              <li><a href="#">Categorias</a></li>
+                      <!--        <li><a href="#">Categorias</a></li>
                               <li class="divider"></li>
                               <!-- Button -->
                               <!--<li class="has-form show-for-large-up">
                                   <a href="#" class="button">Get Lucky</a>
                               </li>-->
-                            <li class="has-form">
+                      <!--      <li class="has-form">
                                 <div class="row collapse">
                                     <div class="large-8 small-9 columns">
                                         <input type="text" placeholder="Buscar..." style=" height: 1.95rem;">
@@ -166,14 +166,41 @@
 		<!--Codigo Original NO  ocupo-->    
 		
 		
-		
+		<!--Logotipo-->
 		<div class="row">
 	      <div class="large-12 columns">
 	        <!--Logotipo -->          
 	          <h1 class="medium-3 columns" id="logo"><a href="#"><span>Logo</span></a></h1>                    
 	      </div>      
 		</div>        
-            
+        <!--Main Menu-->
+		<div class="row">
+		  <div class="large-12 columns">
+		        <nav class="main-menu">
+		            <ul class="menu">
+		                <li><a href="#">INICIO</a></li>
+		                <li><a href="#">SHOP</a></li>
+		                <li><a href="#">CATEGORIAS</a></li>
+		                <li><a href="#">INFORMACION</a></li>
+		                <li><a href="#">IDEAS DE BODA</a></li>	
+		                
+		                <li><a href="#">Categories</a>
+		                	<ul> 
+		                        <li><a href="#">CSS</a></li> 
+		                        <li><a href="#">Graphic design</a></li> 
+		                        <li><a href="#">Development tools</a></li> 
+		                        <li><a href="#">Web design</a></li> 
+                			</ul> 
+        				</li> 	
+		            </ul> 
+		            
+		            
+		            	            
+		            
+		            
+		        </nav>
+		  </div>   
+		</div>    
             
             <?php //contenido de los demas views ?>
         	<?php if(isset($this->breadcrumbs)):?>
