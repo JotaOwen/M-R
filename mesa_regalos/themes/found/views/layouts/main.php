@@ -16,7 +16,7 @@
         <!-- <title>Foundation | Welcome</title> -->
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/normalize.css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.min.css" />
+        <!--<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.min.css" />-->
         
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prism.css" rel="stylesheet">
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/chosen.css" rel="stylesheet">
@@ -44,6 +44,11 @@
     <body>
 
         <div class="row">
+        
+        
+        
+        
+        <?php //este es el header ?>
             <div class="row">
                 <div class="large-12 columns">
                     
@@ -94,9 +99,9 @@
                               <li><a href="#">Categorias</a></li>
                               <li class="divider"></li>
                               <!-- Button -->
-                              <li class="has-form show-for-large-up">
+                              <!--<li class="has-form show-for-large-up">
                                   <a href="#" class="button">Get Lucky</a>
-                              </li>
+                              </li>-->
                             <li class="has-form">
                                 <div class="row collapse">
                                     <div class="large-8 small-9 columns">
@@ -112,51 +117,35 @@
                   </nav>
               </div>
             </div>
-            <!--
-            <div id="mainmenu">
-                <?php/* $this->widget('zii.widgets.CMenu', array('items' => array(
-                        array(
-                            'label' => 'Home',
-                            'url' => array('/site/index')
-                        ),
-                        array(
-                            'label' => 'About',
-                            'url' => array(
-                                '/site/page',
-                                'view' => 'about'
-                            )
-                        ),
-                        array(
-                            'label' => 'Contact',
-                            'url' => array('/site/contact')
-                        ),
-                        array(
-                            'label' => 'Login',
-                            'url' => array('/site/login'),
-                            'visible' => Yii::app()->user->isGuest
-                        ),
-                        array(
-                            'label' => 'Logout (' . Yii::app()->user->name . ')',
-                            'url' => array('/site/logout'),
-                            'visible' => !Yii::app()->user->isGuest
-                        )
-                    ), )); */
-                    ?>
-            </div>--><!-- mainmenu -->
+            
+            
+            
+            
+            <?php //contenido de los demas views ?>
         	<?php if(isset($this->breadcrumbs)):?>
         		<?php $this->widget('zii.widgets.CBreadcrumbs', array('links' => $this->breadcrumbs, )); ?><!-- breadcrumbs -->
         	<?php endif ?>
 
             <div class="row">
-              <div class="large-12 columns">
+            <div class="large-12 columns">
+              <div class="large-3 columns">
+                <div class="panel">
+                
+                teteteteet
+                    <?php //aki metes el panel izquierdo ?>
+                </div>
+              </div>
+            
+              <div class="large-9 columns">
                 <div class="panel">
                     <?php echo $content; ?>
                 </div>
               </div>
+             </div> 
             </div>
 
             <div class="clear"></div>
-
+<?php //este el footer ?>
             <div class="row">
                 <div class="large-12 columns">
                     Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
