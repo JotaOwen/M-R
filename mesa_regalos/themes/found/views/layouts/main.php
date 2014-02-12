@@ -30,7 +30,7 @@
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/foundation/foundation.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/foundation.min.js"></script>
         <script>
-            $(document).foundation();
+			$(document).foundation();
         </script>
         
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/jquery.textareaCounter.js"></script>
@@ -239,24 +239,24 @@
       <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/chosen.jquery.js" type="text/javascript"></script>
       <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/prism.js" type="text/javascript" charset="utf-8"></script>
       <script type="text/javascript">
-        var config = {
-            '.chosen-select' : {},
-            '.chosen-select-deselect' : {
-                allow_single_deselect : true
-            },
-            '.chosen-select-no-single' : {
-                disable_search_threshold : 10
-            },
-            '.chosen-select-no-results' : {
-                no_results_text : 'No se encontraron Resultados!'
-            },
-            '.chosen-select-width' : {
-                width : "95%"
-            }
-        }
-        for (var selector in config) {
-            $(selector).chosen(config[selector]);
-        }
+		var config = {
+			'.chosen-select' : {},
+			'.chosen-select-deselect' : {
+				allow_single_deselect : true
+			},
+			'.chosen-select-no-single' : {
+				disable_search_threshold : 10
+			},
+			'.chosen-select-no-results' : {
+				no_results_text : 'No se encontraron Resultados!'
+			},
+			'.chosen-select-width' : {
+				width : "95%"
+			}
+		}
+		for (var selector in config) {
+			$(selector).chosen(config[selector]);
+		}
       </script>
         
     </body>
