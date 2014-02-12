@@ -3,7 +3,7 @@
         $("#address8").select2();
     }); 
 </script>
-TEST
+TEST2
 <form>
     <fieldset>
         <legend>
