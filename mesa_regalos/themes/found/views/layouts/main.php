@@ -46,9 +46,6 @@
 
         <div class="row">
         
-          
-        
-        
         <?php //este es el header ?>
         
         
@@ -74,7 +71,7 @@
 					                  <li><a href="#">Faq</a></li>
 					                </ul>
 					              </li>
-					              <li class="divider"></li>                             
+					              <li class="divider"></li>
 	                            <li class="has-form">
 	                                <div class="row collapse">
 	                                    <div class="large-8 small-9 columns">
@@ -89,7 +86,7 @@
 			          </section>
 		        </nav>
 		      </div>
-    	  </div>        
+    	  </div>
          <!--Fin Codigo anexado del prototipo html-->
         
         
@@ -166,41 +163,56 @@
 		<!--Codigo Original NO  ocupo-->    
 		
 		
-		<!--Logotipo-->
-		<div class="row">
-	      <div class="large-12 columns">
-	        <!--Logotipo -->          
-	          <h1 class="medium-3 columns" id="logo"><a href="#"><span>Logo</span></a></h1>                    
-	      </div>      
-		</div>        
-        <!--Main Menu-->
-		<div class="row">
-		  <div class="large-12 columns">
-		        <nav class="main-menu">
-		            <ul class="menu">
-		                <li><a href="#">INICIO</a></li>
-		                <li><a href="#">SHOP</a></li>
-		                <li><a href="#">CATEGORIAS</a></li>
-		                <li><a href="#">INFORMACION</a></li>
-		                <li><a href="#">IDEAS DE BODA</a></li>	
-		                
-		                <li><a href="#">Categories</a>
-		                	<ul> 
-		                        <li><a href="#">CSS</a></li> 
-		                        <li><a href="#">Graphic design</a></li> 
-		                        <li><a href="#">Development tools</a></li> 
-		                        <li><a href="#">Web design</a></li> 
-                			</ul> 
-        				</li> 	
-		            </ul> 
-		            
-		            
-		            	            
-		            
-		            
-		        </nav>
-		  </div>   
-		</div>    
+  <!--Logotipo-->
+            <div class="row">
+                <div class="large-12 columns">
+                    <!--Logotipo -->
+                    <h1 class="medium-3 columns" id="logo"><a href="#"><span>Logo</span></a></h1>
+                </div>
+            </div>
+            <!--Main Menu-->
+            <div class="row">
+                <div class="large-12 columns">
+                    <nav class="main-menu">
+                        <ul class="menu">
+                            <li>
+                                <a href="#">INICIO</a>
+                            </li>
+                            <li>
+                                <a href="#">SHOP</a>
+                            </li>
+                            <li>
+                                <a href="#">CATEGORIAS</a>
+                            </li>
+                            <li>
+                                <a href="#">INFORMACION</a>
+                            </li>
+                            <li>
+                                <a href="#">IDEAS DE BODA</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Categories</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">CSS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Graphic design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Development tools</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Web design</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
             
             <?php //contenido de los demas views ?>
         	<?php if(isset($this->breadcrumbs)):?>
@@ -224,9 +236,8 @@
               </div>
              </div> 
             </div>
-
             <div class="clear"></div>
-<?php //este el footer ?>
+            <?php //este el footer ?>
             <div class="row">
                 <div class="large-12 columns">
                     Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>

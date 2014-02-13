@@ -5,7 +5,6 @@
         
     }
     $(document).on('ready',function() {
-        
         var oTable1;
         $(document).ready(function() {
             oTable1 = $('table[id="table_id"]')
@@ -28,7 +27,6 @@
                 "oTableTools": {
                     "sSwfPath": "<?php echo Yii::app()->theme->baseUrl;?>/css/copy_csv_xls_pdf.swf"
                 }
-                
             });
             $('div[id="table_id_length"] select').addClass('large-6 columns');
             $('div[id="table_id_paginate"]').addClass('pagination');

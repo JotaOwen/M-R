@@ -89,13 +89,15 @@
 }
 
 .dataTables_filter label {
-
     line-height: 2.5;
 }
 .dataTables_info {
     width: 40%;
     float: left;
     padding: 10px;
+    
+    font-size: 10px;
+    margin-top: -10px;
 }
 
 .dataTables_paginate {
@@ -104,6 +106,8 @@
     float: right;
     text-align: right;
     padding: 10px;
+    font-size: 10px;
+    margin-top: -15px;
 }
 
 /* Pagination nested */
@@ -115,20 +119,20 @@
 }
 
 .paginate_disabled_previous {
-    background-image: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/back_disabled.png');
+    background-image: url('img/sort_icons/back_disabled.png');
 }
 
 .paginate_enabled_previous {
-    background-image: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/back_enabled.png');
+    background-image: url('img/sort_icons/back_enabled.png');
     cursor: pointer;
 }
 
 .paginate_disabled_next {
-    background-image: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/forward_disabled.png');
+    background-image: url('img/sort_icons/forward_disabled.png');
 }
 
 .paginate_enabled_next {
-    background-image: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/forward_enabled.png');
+    background-image: url('img/sort_icons/forward_enabled.png');
     cursor: pointer;
 }
 
@@ -201,23 +205,23 @@ table.display td.center {
  */
 
 .sorting_asc {
-    background: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/sort_asc.png') no-repeat center right;
+    background: #F4067D url('img/sort_icons/sort_asc.png') no-repeat center right !important;
 }
 
 .sorting_desc {
-    background: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/sort_desc.png') no-repeat center right;
+    background: #F4067D url('img/sort_icons/sort_desc.png') no-repeat center right;
 }
 
 .sorting {
-    background: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/sort_both.png') no-repeat center right;
+    background: #F4067D url('img/sort_icons/sort_both.png') no-repeat center right;
 }
 
 .sorting_asc_disabled {
-    background: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/sort_asc_disabled.png') no-repeat center right;
+    background: #F4067D url('img/sort_icons/sort_asc_disabled.png') no-repeat center right;
 }
 
 .sorting_desc_disabled {
-    background: url(<?php echo Yii::app()->theme->baseUrl;?>'/img/datatables/sort_icons/sort_desc_disabled.png') no-repeat center right;
+    background: #F4067D url('img/sort_icons/sort_desc_disabled.png') no-repeat center right;
 }
 
 /*-::::::::::Actions::::::::::-*/
@@ -401,12 +405,12 @@ td.details {
 }
 
 .paging_full_numbers a.paginate_button {
-    background: #3277B5 url('/img/simpla/bg-button-green.gif') top left repeat-x !important;
+    background: #F4067D  top left repeat-x !important;
 }
 
 .paging_full_numbers a.paginate_button:hover {
-    background: #3277B5 url('/img/simpla/bg-button-green.gif') top left repeat-x !important;
-    border-color: #459300 !important;
+    background: #F4079D  top left repeat-x !important;
+    border-color: #205774 !important;
     color: #fff !important;
 }
 
@@ -422,18 +426,18 @@ td.details {
  }*/
 
 .paging_full_numbers a.paginate_active {
-    background: #3277B5 url('/img/simpla/bg-button-green.gif') top left repeat-x !important;
+    background: #F4079D  top left repeat-x !important;
     border: 3px solid #205774;
     cursor: default;
 }
 .paginate_button_disabled {
-    background: #3277B5 url('/img/simpla/bg-button-green.gif') top left repeat-x !important;
+    background: #F4057D  top left repeat-x !important;
     border: 1px solid #ccc !important;
     color: #FFF !important;
 }
 
 .paging_full_numbers a.paginate_button_disabled:hover {
-    background: #3277B5 url('/img/simpla/bg-button-green.gif') top left repeat-x !important;
+    background: #F4079D  top left repeat-x !important;
     border: 1px solid #ccc !important;
     color: #FFF !important;
     cursor: default;
