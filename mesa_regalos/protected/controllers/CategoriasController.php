@@ -1,10 +1,14 @@
 <?php
 
 class CategoriasController extends Controller {
+
     public $layout = '//layouts/admin';
+
     public function actionIndex() {
 
-        $this->render('index');
+        $CategoryData = Yii::app()->db->createCommand()->select(' * ')->from('categoria')->queryAll();
+
+        $this->render('index', array('CategoryData' => $CategoryData));
     }
 
     public function actionForms() {

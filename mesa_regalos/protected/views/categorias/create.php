@@ -29,11 +29,7 @@
                     <option>Spectacled Bear</option>
                 </select>
             </div>
-
         </div>
-
-
-
 
         <div class="row">
             <div class="large-6 columns">
@@ -63,7 +59,7 @@
 
         <div class="row">
             <div class="large-12 columns">
-                <input type="submit" class="button [radius round]" value="Guardar" />
+                <input type="submit" class="button [tiny small large]" value="Guardar" />
             </div>
         </div>
     </fieldset>

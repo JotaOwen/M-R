@@ -67,7 +67,7 @@
                                                 <li class="title back js-generated"><h5><a href="javascript:void(0)">Regresar</a></h5></li>
                                                 <li><label>CRUD</label></li>
                                                 <li><a href="<?php echo $this->createUrl("categorias/create"); ?>">Agregar</a></li>
-                                                <li><a href="#">Listar</a></li>
+                                                <li><a href="<?php echo $this->createUrl("categorias/index"); ?>">Listar</a></li>
                                             </ul>
                                         </li>
                                         <li class="divider"></li>
@@ -107,7 +107,7 @@
                                         <input type="text" placeholder="Buscar..." style=" height: 1.95rem;">
                                     </div>
                                     <div class="large-4 small-3 columns">
-                                        <a href="#" class="alert button expand">Buscar</a>
+                                        <a href="#" class="button expand">Buscar</a>
                                     </div>
                                 </div>
                             </li>
