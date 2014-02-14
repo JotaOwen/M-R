@@ -1,15 +1,10 @@
 <?php
 
 class CategoriasController extends Controller {
-
+    public $layout = '//layouts/admin';
     public function actionIndex() {
 
         $this->render('index');
-    }
-
-    public function actionCreate() {
-
-        $this->render('create');
     }
 
     public function actionForms() {
@@ -17,18 +12,23 @@ class CategoriasController extends Controller {
         $this->render('forms');
     }
 
-     public function actionInsert() {
-         FB::info($_POST,"nombre");
+    public function actionCreate() {
+        FB::info($_POST, "____________________POST");
+
         $model = new Categoria;
-          $model->nombre= $_POST['nombre'];
-          $model->idCategoria= $_POST['idCategoria'];
-          $_POST['activo']=="true"?$model->activo=1:$model->activo=0;
-          $model->fechaDeCreacion= new CDbExpression('NOW()');//new Date();//$_POST['fechaDeCreacion'];
-          $model->posicion= $_POST['posicion'];
-          $model->imagen= $_POST['imagen'];
-          $model->metas= $_POST['metas'];
-          $model->save();
-          $this->render('create');
+        if (!empty($_POST)) {
+            $_POST['metas'] = implode(",", $_POST['metas']);
+            $model->attributes = $_POST;
+            $_POST['activo']=="true" ? $model->activo = 1 : $model->activo = 0;
+            $model->fechaDeCreacion = new CDbExpression('NOW()');
+            FB::INFO($model->attributes, '_______________________ATTRIBUTES');
+            if ($model->save()) {
+                Yii::app()->user->setFlash("success", "La Categoria se Guardo Correctamente");
+            } else {
+                Yii::app()->user->setFlash("warning", "No se pudo guardar la categoria, por favor intente de nuevo.");
+            }
+        }
+        $this->render('create');
     }
 
 }

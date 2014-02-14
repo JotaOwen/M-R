@@ -18,6 +18,9 @@
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/foundation.min.css" />
         
+        <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/prism.css" rel="stylesheet">
+        <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/chosen.css" rel="stylesheet">
+        
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/datatables/data-table.css" rel="stylesheet">
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/datatables/TableTools.css" rel="stylesheet">
         
@@ -63,7 +66,7 @@
                                             <ul class="dropdown">
                                                 <li class="title back js-generated"><h5><a href="javascript:void(0)">Regresar</a></h5></li>
                                                 <li><label>CRUD</label></li>
-                                                <li><a href="#">Agregar</a></li>
+                                                <li><a href="<?php echo $this->createUrl("categorias/create"); ?>">Agregar</a></li>
                                                 <li><a href="#">Listar</a></li>
                                             </ul>
                                         </li>
@@ -114,9 +117,20 @@
               </div>
             </div>
             
-        	<?php if(isset($this->breadcrumbs)):?>
-        		<?php $this->widget('zii.widgets.CBreadcrumbs', array('links' => $this->breadcrumbs, )); ?><!-- breadcrumbs -->
-        	<?php endif ?>
+            <?php if(isset($this->breadcrumbs)):?>
+                <?php $this->widget('zii.widgets.CBreadcrumbs', array('links' => $this->breadcrumbs, )); ?><!-- breadcrumbs -->
+            <?php endif ?>
+
+            <?php if(($msgs=Yii::app()->user->getFlashes())!==null and $msgs!==array()):?>
+                <?php foreach($msgs as $type => $message):?>
+                    <div data-alert class="alert-box <?php echo $type?> radius">
+                        <!-- <h6><?php //echo ucfirst($type)?>!</h6> -->
+                        <?php echo $message?>
+                        <a href="#" class="close">&times;</a>
+                    </div>
+                <?php endforeach;?>
+            <?php endif;?>
+
 
             <div class="row">
               <div class="large-12 columns">
@@ -140,5 +154,30 @@
         <script>
             $(document).foundation();
         </script>
+        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/chosen.jquery.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/prism.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript">
+        var config = {
+            '.chosen-select' : {},
+            '.chosen-select-deselect' : {
+                allow_single_deselect : true
+            },
+            '.chosen-select-no-single' : {
+                disable_search_threshold : 10
+            },
+            '.chosen-select-no-results' : {
+                no_results_text : 'No se encontraron Resultados!'
+            },
+            '.chosen-select-width' : {
+                width : "95%"
+            }
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+      </script>
+        
+        
+        
     </body>
 </html>
