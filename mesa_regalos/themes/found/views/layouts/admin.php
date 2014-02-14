@@ -24,13 +24,17 @@
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/datatables/data-table.css" rel="stylesheet">
         <link href="<?php echo Yii::app()->theme->baseUrl; ?>/css/datatables/TableTools.css" rel="stylesheet">
         
+        <link href="<?php echo Yii::app()->theme->baseUrl;?>/css/datepicker.css" rel="stylesheet">
+        <link href="<?php echo Yii::app()->theme->baseUrl;?>/css/jquery-ui.css" rel="stylesheet">
+        
         
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/vendor/jquery.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/vendor/modernizr.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/foundation/foundation.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/foundation.min.js"></script>
-        
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/jquery.dataTables.min.js"></script>
+        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-ui.js"></script>
+        
         
 
     </head>

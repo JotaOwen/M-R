@@ -1,80 +1,71 @@
 <script type="text/javascript">
     $(document).on('ready', function() {
-        $("#select").select2();
-        $("#address8").select2();
+        $('#fecha_disponible').datepicker({ dateFormat: 'yy-mm-dd' });
     }); 
 </script>
 
 
 
-<form action="<?php echo Yii::app()->getBaseUrl().'/productos/insert';?>" method="post">
+<form action="" method="post">
     <fieldset>
-         <legend>
+        <legend>
             Nuevo Producto
         </legend>
         <input type="hidden" name="idProducto" value=""/>
         <div class="row">
             <div class="large-12 columns">
                 <label>Nombre</label>
-                <input type="text" placeholder="Categoria" name="nombre">
+                <input type="text" placeholder="Nombre del Producto" name="nombre">
             </div>
         </div>
 
         <div class="row">
              <div class="large-6 columns">
                 <label>Categoria</label>
-                <?php 
-                	$model = Categoria::model()->findAll();	
-                	$list = CHtml::listData($model, 'idCategoria', 'nombre');  
-					 echo "<select name=\"fkCategoria\">";
-					 echo "<option value=\"0\" selected>Seleccione una opción...</option>";
-					 foreach ($list as $key => $value) {
-						echo "<option value=\"$key\">$value</option>";
-					 }
-					echo "</select>";
-            	?>
+                <select name='fkCategoria' class="chosen-select-no-single" >
+                    <option value='0'>Seleccione una opción...</option>
+                    <?php 
+                    foreach ($ListaCategorias as $key => $value) {
+                        echo "<option value=\"{$key}\">{$value}</option>";
+                    }
+                    ?>
+                </select>
             </div>
              <div class="large-6 columns">
                 <label>Subcategoria</label>
-                <?php 
-                	$model = Subcategoria::model()->findAll();	
-                	$list = CHtml::listData($model, 'idSubcategoria', 'nombre');  
-					 echo "<select name=\"fkSubcategoria\">";
-					 echo "<option value=\"0\" selected>Seleccione una opción...</option>";
-					 foreach ($list as $key => $value) {
-						echo "<option value=\"$key\">$value</option>";
-					 }
-					echo "</select>";
-            	?>
+                    <select name="fkSubcategoria" class="chosen-select-no-single">
+                        <option value="0">Seleccione una opción...</option>
+                    <?php 
+                    foreach ($ListaSubCategorias as $key => $value) {
+                        echo "<option value=\"{$key}\">{$value}</option>";
+                    }
+                    ?>
+                    </select>
             </div>
         </div>
 
         <div class="row">
-        	<div class="large-6 columns">
+            <div class="large-6 columns">
                 <label>Proveedor</label>
-                <?php 
-                	$model = Proveedor::model()->findAll();	
-                	$list = CHtml::listData($model, 'idProveedor', 'nombre');  
-					 echo "<select name=\"fkProveedor\">";
-					 echo "<option value=\"0\" selected>Seleccione una opción...</option>";
-					 foreach ($list as $key => $value) {
-						echo "<option value=\"$key\">$value</option>";
-					 }
-					echo "</select>";
-            	?>
+                    <select name="fkProveedor" class="chosen-select-no-single">
+                        <option value="0" selected>Seleccione una opción...</option>
+                    <?php 
+                    foreach ($ListaProveedor as $key => $value) {
+                        echo "<option value=\"{$key}\">{$value}</option>";
+                    }
+                    ?>
+                    </select>
             </div>
-             <div class="large-6 columns">
+            <div class="large-6 columns">
                 <label>Marca</label>
-                <?php 
-                	$model = Marca::model()->findAll();	
-                	$list = CHtml::listData($model, 'idMarca', 'nombre');  
-					 echo "<select name=\"fkMarca\">";
-					 echo "<option value=\"0\" selected>Seleccione una opción...</option>";
-					 foreach ($list as $key => $value) {
-						echo "<option value=\"$key\">$value</option>";
-					 }
-					echo "</select>";
-            	?>
+                    <select name="fkMarca" class="chosen-select-no-single">
+                        <option value="0" selected>Seleccione una opción...</option>
+                    <?php 
+                    foreach ($ListaMarcas as $key => $value) {
+                        echo "<option value=\"{$key}\">{$value}</option>";
+                    }
+                    ?>
+                    </select>
             </div>
         </div>
 
@@ -89,49 +80,34 @@
             </div>
            <div class="small-6 columns">
                 <label>Código de barras</label>
-                <input type="text" placeholder="1111111" name="codigoDeBarras">
+                <input type="text" placeholder="Codigo de Barras" name="codigoDeBarras">
             </div>
         </div>
 
-         
-
-
         <div class="row">
-
-              
-             <div class="small-3 columns">
+            <div class="small-3 columns">
                 <label>SKU</label>
                 <input type="text" placeholder="10" name="sku">
             </div>
             <div class="small-3 columns">
                   <label>¿En venta?
-                    <select name="enVenta">
+                    <select name="enVenta" class="chosen-select-no-single">
                       <option value="true" selected>Si</option>
                       <option value="false">No</option>
                     </select>
               </label>
             </div>
             <div class="small-6 columns">
-                <label>Unidad de medida</label>
-                <?php 
-                    $model = UnidadMedida::model()->findAll(); 
-                    $list = CHtml::listData($model, 'idUnidadMedida', 'unidad');  
-                     echo "<select name=\"fkUnidadMedida\">";
-                     echo "<option value=\"0\" selected>Seleccione una opción...</option>";
-                     foreach ($list as $key => $value) {
-                        echo "<option value=\"$key\">$value</option>";
-                     }
-                    echo "</select>";
-                ?>
-            </div>
-            <!--div class="small-3 columns">
-                  <label>¿Es virtual?
-                    <select name="esVirtual">
-                      <option value="true">Si</option>
-                      <option value="false" selected>No</option>
+                    <label>Unidad de medida</label>
+                    <select name="fkUnidadMedida" class="chosen-select-no-single">
+                        <option value="0" selected>Seleccione una opción...</option>
+                    <?php
+                    foreach ($ListaUnidadMedida as $key => $value) {
+                        echo "<option value=\"{$key}\">{$value}</option>";
+                    }
+                    ?>
                     </select>
-              </label>
-            </div-->
+            </div>
             <input type="hidden" name="esVirtual" value="false"/>
         </div>
 
@@ -145,7 +121,6 @@
                 <input type="text" placeholder="Categoria" name="referencia_proveedor">
             </div>
         </div>
-
 
         <div class="row">
             <div class="small-3 columns">
@@ -167,21 +142,46 @@
         </div>
 
         <div class="row">
-            <div class="small-6 columns">
+            <div class="small-3 columns">
                 <label>Fecha de disponibilidad</label>
-                <input type="text" placeholder="10-11-2014" name="fecha_disponible">
+                <input type="text" placeholder="10-11-2014" id="fecha_disponible" name="fecha_disponible">
             </div>
-            <div class="small-6 columns">
+            <div class="small-3 columns"></div>
+            <div class="small-3 columns">
                   <label>Estatus
-                    <select name="activo">
+                    <select name="activo" class="chosen-select-no-single">
                       <option value="true" selected>Activo</option>
                       <option value="false">Inactivo</option>
                     </select>
               </label>
             </div>
-
+            <div class="small-3 columns"></div>
         </div>
 
+        <div class="row">
+            <div class="small-6 columns">
+                <table id="IMGATACH" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th><input type="button" id="agregar" value="Agregar" class="btn btn-success" /></th>
+                        </tr>
+                    </thead>
+                    <!-- Cuerpo de la tabla con los campos -->
+                    <tbody>
+                    <?php { ?>
+                        <!-- fila base para clonar y agregar al final -->
+                        <tr class="fila-base">
+                            <td><input type="file" name="IMGS[]"  /></td>
+                            <td class="eliminar" style="text-align: left"><input type="button" value="X" class="button [tiny small large] [radius round]" /></td>
+                        </tr>
+                        <!-- fin de código: fila base -->
+                    <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
         <div class="row">
             <div class="large-12 columns">
                 <input type="submit" class="button [radius round]" value="Guardar" />
@@ -191,3 +191,24 @@
 </form>
 
 <div style="width: 50px;"></div>
+
+
+
+<script type="text/javascript">
+     $(function(){
+        // Clona la fila oculta que tiene los campos base, y la agrega al final de la tabla
+        $("#agregar").on("click", function(){
+            $("#IMGATACH tbody tr:eq(0)").clone().removeClass("fila-base").appendTo("#IMGATACH tbody");
+        //  alert( $("#tabla tbody").find(":last-child")    );
+        });
+        
+        // Evento que selecciona la fila y la elimina 
+        $(document).on("click",".eliminar",function(){
+            var parent = $(this).parents().get(0);
+            $(parent).remove();
+        });
+        
+    });
+</script>
+
+

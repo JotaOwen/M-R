@@ -7,17 +7,12 @@ class MarcasController extends Controller {
         $this->render('index');
     }
 
-    public function actionCreate() {
-
-        $this->render('create');
-    }
-
     public function actionForms() {
 
         $this->render('forms');
     }
 
-    public function actionInsert() {
+    public function actionCreate() {
         FB::INFO($_POST, '____________________________POST');
         $model = new Marca;
         if (!empty($_POST)) {
@@ -35,7 +30,7 @@ class MarcasController extends Controller {
                 FB::error("ERROR", "no pasa validacion");
             }
         }
-        $this->render("index");
+        $this->render("create");
     }
 
 }
