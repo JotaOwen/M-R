@@ -1,4 +1,4 @@
-<?php /* @var $this Controller */ ?>
+<?php /* @dsdsdsdsdsvar $this Controller */ ?>
 <!doctype html>
 <html class="no-js" lang="es">
     <head>
