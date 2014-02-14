@@ -50,6 +50,11 @@ body {
   position: relative;
   cursor: default; }
 
+
+.price{
+    text-align: right;
+}
+
 a:hover {
   cursor: pointer; }
 
@@ -62,6 +67,8 @@ embed {
 object,
 embed {
   height: 100%; }
+
+
 
 img {
   -ms-interpolation-mode: bicubic; }
