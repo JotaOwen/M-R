@@ -12,12 +12,13 @@
         <div class="row">
             <div class="large-6 columns">
                 <label>Nombre</label>
-                <input type="text" placeholder="Categoria" name="nombre">
+                <input type="text" placeholder="Nombre de Categoria" name="nombre">
             </div>
 
             <div class="large-6 columns">
                 <label>Tags</label>
-                <select data-placeholder="Seleccione Tags" name="metas[]" _style="width:350px;" multiple class="chosen-select-no-results" tabindex="11">
+                <input type="text" placeholder="Meta Tags" name="metas">
+                <!-- <select data-placeholder="Seleccione Tags" name="metas[]" _style="width:350px;" multiple class="chosen-select-no-results" tabindex="11">
                     <option value=""></option>
                     <option>American Black Bear</option>
                     <option>Asiatic Black Bear</option>
@@ -27,7 +28,7 @@
                     <option>Sun Bear</option>
                     <option>Polar Bear</option>
                     <option>Spectacled Bear</option>
-                </select>
+                </select> -->
             </div>
         </div>
 
@@ -45,7 +46,7 @@
             </div>
             <div class="small-3 columns">
                 <label>Posición</label>
-                <input type="text" placeholder="large-4.columns" name="posicion" value="">
+                <input type="text" placeholder="Posición" name="posicion" value="">
             </div>
 
             <div class="small-3 columns">

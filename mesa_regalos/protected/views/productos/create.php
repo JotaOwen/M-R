@@ -6,7 +6,7 @@
 
 
 
-<form action="" method="post">
+<form method="post">
     <fieldset>
         <legend>
             Nuevo Producto
@@ -144,7 +144,7 @@
         <div class="row">
             <div class="small-3 columns">
                 <label>Fecha de disponibilidad</label>
-                <input type="text" placeholder="10-11-2014" id="fecha_disponible" name="fecha_disponible">
+                <input type="text" placeholder="Seleccione" id="fecha_disponible" name="fecha_disponible">
             </div>
             <div class="small-3 columns"></div>
             <div class="small-3 columns">
@@ -163,8 +163,8 @@
                 <table id="IMGATACH" class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Imagen</th>
-                            <th><input type="button" id="agregar" value="Agregar" class="btn btn-success" /></th>
+                            <th>Agregar Imagen</th>
+                            <th style="text-align: right; "><input type="button" id="agregar" value="+" title="Agregar otra Imagen" style="color: #FFFFFF; border: 1px solid; background-color:#E339A4; border-color:#FFFFFF; " /></th>
                         </tr>
                     </thead>
                     <!-- Cuerpo de la tabla con los campos -->

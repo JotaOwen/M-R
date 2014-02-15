@@ -27,6 +27,8 @@
         <link href="<?php echo Yii::app()->theme->baseUrl;?>/css/datepicker.css" rel="stylesheet">
         <link href="<?php echo Yii::app()->theme->baseUrl;?>/css/jquery-ui.css" rel="stylesheet">
         
+        <link href="<?php echo Yii::app()->theme->baseUrl;?>/css/jwn-style.css" rel="stylesheet">
+        
         
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/vendor/jquery.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/vendor/modernizr.js"></script>
@@ -35,12 +37,12 @@
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/jquery.dataTables.min.js"></script>
         <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery-ui.js"></script>
         
+        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/noty.js"></script>
+        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/configuration.js"></script>
         
-
     </head>
-
+    
     <body>
-
         <div class="row">
             <div class="row">
                 <div class="large-12 columns">
@@ -63,8 +65,8 @@
                                     <ul class="dropdown">
                                         <li class="title back js-generated"><h5><a href="javascript:void(0)">Regresar</a></h5></li>
                                         <li><label>CRUD</label></li>
-                                        <li><a href="#">Agregar</a></li>
-                                        <li><a href="#">Listar</a></li>
+                                        <li><a href="<?php echo $this->createUrl("productos/create"); ?>">Agregar</a></li>
+                                        <li><a href="<?php echo $this->createUrl("productos/index"); ?>">Listar</a></li>
                                         <li class="divider"></li>
                                         <li class="has-dropdown not-click"><a href="#">Categorias</a>
                                             <ul class="dropdown">
@@ -117,6 +119,7 @@
                             </li>
                           </ul>
                       </section>
+                      <div id="notify-container"></div>
                   </nav>
               </div>
             </div>
