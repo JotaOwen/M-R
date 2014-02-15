@@ -6,10 +6,18 @@ class ProductosController extends Controller {
 
     public function actionIndex() {
 
-        $this->render('index');
+        $ProductsData = Yii::app()->db->createCommand()->select(' * ')->from('producto')->queryAll();
+
+        $ListaCategorias = CHtml::listData(Categoria::model()->findAll(), 'idCategoria', 'nombre');
+        $ListaMarcas = CHtml::listData(Marca::model()->findAll(), 'idMarca', 'nombre');
+        $this->render('index', array(
+            'ProductsData' => $ProductsData,
+            'ListaMarcas' => $ListaMarcas,
+            'ListaCategorias' => $ListaCategorias
+        ));
     }
 
-    public function actionCreate() {
+    public function actionCreate() {//E339A4  //F4067D
         FB::info($_POST, "__________________________POST");
 
         $model = new Producto;

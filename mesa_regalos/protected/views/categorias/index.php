@@ -1,15 +1,29 @@
 
-
-
 <script type="text/javascript">
-    $(document).on('ready',function() {
+    $(document).on('ready',function() { //GetDataTableContent
         
         //Create DataTable
         oTable1 = $('table[id="Table_Category"]')
             .dataTable( {
-            "sPaginationType": "full_numbers",
-             "sDom": 'T<"clear">lfrtip',
+                "sPaginationType": "full_numbers",
+                "sDom": 'T<"clear">lfrtip',
+                "bProcessing": true,
+                "bServerSide": true,
+                "sAjaxSource": "<?php echo $this->createUrl("categorias/getdatatablecontent"); ?>",
+                "fnServerData": function ( sSource, aoData, fnCallback ) {
+                    $.ajax( {
+                        "dataType": 'json', 
+                        "type": "POST", 
+                        "url": sSource, 
+                        "data": aoData, 
+                        "success": fnCallback
+                    } );
+                }
         });
+        
+        
+        
+        
         
         //Load Vars
         $('a[name="OpenEditModal"]').click(function() {
@@ -33,11 +47,20 @@
                           posicion: $('#EditPosicion').val()
                       },
                 },
-                success : ajaxSuccess,
+                success : function(data, newValue) { //ajaxSuccess,
+                    if (data.requestresult == 'ok') {
+                        displayNotify('success', data.message);
+                        //replaceText = "<tr><td>Some label3</td><td>Some data3</td></tr>";
+                        //alert($('tr[id="6"]').parents("tr:first").outerHTML());
+                         $('#Table_Category tbody').html(data.content);
+                    }
+                },
                 error : ajaxError
             })
             .done(function() {
                 //
+                //replaceText = "<tr><td>Some label3</td><td>Some data3</td></tr>";
+                //$('tr[id="'+ idCategoria +'"]').parent().html(replaceText);
             })
             .fail(function() {
                 //alert( "error" );
@@ -86,7 +109,7 @@
     </thead>
     <tbody>
         <?php foreach($CategoryData as $Data){ ?>
-        <tr>
+        <tr id="<?php echo $Data['idCategoria']; ?>">
             <td><?php echo $Data['idCategoria']; ?></td>
             <td><?php echo $Data['nombre']; ?></td>
             <td><?php echo $Data['imagen']; ?></td>
