@@ -1,13 +1,19 @@
 <script type="text/javascript">
     $(document).on('ready', function() {
-        $("#select").select2();
-        $("#address8").select2();
+        $('#fileInput').change(function () {
+        $('#fileInputText').val(this.value);
+        var nombre = this.value.split('.');
+      console.log(nombre);
+        $('#nuevoNombre').val(nombre[0]);
+        console.log( $('#ext').html());
+        $('#ext').html('.'+nombre[1]);
+    });
     }); 
 </script>
+<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/css/buttonFile.css">
 
-
-
-<form action="<?php //echo Yii::app()->getBaseUrl().'/marcas/insert';?>" method="post">
+<form data-abide action="<?php echo Yii::app()->getBaseUrl().'/marcas/create'?>" method="post" enctype="multipart/form-data">
+<!--form action="<?php //echo Yii::app()->getBaseUrl().'/marcas/insert';?>" method="post"-->
     <fieldset>
          <legend>
             Nueva Marca
@@ -15,20 +21,34 @@
         <input type="hidden" name="idMarca" value=""/>
         <div class="row">
             <div class="large-6 columns">
-                <label>Nombre</label>
-                <input type="text" placeholder="Categoria" name="nombre">
+                <label>Nombre<small>   Requerido</small>
+                  <input type="text" placeholder="Categoria" name="nombre" required pattern="[a-zA-Z]+">
+                </label><small class="error">El nombre de la marca es requerido.</small>
             </div>
 
-			<div class="large-6 columns">
+      <div class="large-3 columns">
                 <label>Logo</label>
                 <div class="row collapse">
                     <div class="small-9 columns">
-                        <input type="text" placeholder="Seleccione una imagen" name="logo">
+                        <input id="fileInputText" disabled="true" type="text" placeholder="Selecciona logo" >
                     </div>
                     <div class="large-3 columns">
-                        <a href="#" class="button postfix">Cargar</a>
+                           <a class="button postfix">Cargar
+                           <input id="fileInput" type="file" class="buttonFile" name="imagen"/></a>
                     </div>
                 </div>
+            </div>
+            <div class="small-3 columns">
+                <label>Nuevo nombre</label>
+                 <div class="row collapse">
+                    <div class="small-9 columns">
+                       <input type="text" id="nuevoNombre" placeholder="imagen" name="nuevoNombre" value="">
+                    </div>
+                    <div class="large-3 columns">
+                           <a id="ext" class="button postfix">.jpg</a>
+                    </div>
+                </div>
+                
             </div>
             
         </div>
@@ -36,24 +56,25 @@
         <div class="row">
             
             <div class="large-9 columns">
-                 <label>Descripción breve</label>
-                <input type="text" placeholder="" name="descripcionBreve" value="">
+                 <label>Descripción breve<small>   Requerido</small>
+                    <input type="text" placeholder="" name="descripcionBreve" value="" required>
+                 </label><small class="error">La descripción es requerida.</small>
             </div>
              <div class="small-3 columns">
-                  <label>Estatus
+                  <label>Estatus<small>   Requerido</small>
                     <select name="activo">
                       <option value="true" selected>Activo</option>
                       <option value="false">Inactivo</option>
                     </select>
-              </label>
+              </label><small class="error">El estatus es requerida.</small>
             </div>
-		</div>
+    </div>
 
         <div class="row">
               <div class="small-12 columns">
                   <label>Descripción Larga</label>
                   <textarea type="text" placeholder="" name="descripcionLarga" value=""></textarea>
-                  	    
+                        
             </div>
         </div>
 

@@ -4,9 +4,8 @@
     }); 
 </script>
 
-
-
-<form method="post">
+<link rel="stylesheet" href="<?php echo Yii::app()->baseUrl;?>/css/buttonFile.css">
+<form data-abide action="<?php echo Yii::app()->getBaseUrl().'/productos/create'?>" method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>
             Nuevo Producto
@@ -14,15 +13,16 @@
         <input type="hidden" name="idProducto" value=""/>
         <div class="row">
             <div class="large-12 columns">
-                <label>Nombre</label>
-                <input type="text" placeholder="Nombre del Producto" name="nombre">
+                <label>Nombre<small>   Requerido</small>
+                <input type="text" placeholder="Nombre del Producto" name="nombre" required>
+                </label><small class="error">El nombre del producto es requerido.</small>
             </div>
         </div>
 
         <div class="row">
              <div class="large-6 columns">
-                <label>Categoria</label>
-                <select name='fkCategoria' class="chosen-select-no-single" >
+                <label>Categoria<small>   Requerido</small>
+                <select name='fkCategoria' class="chosen-select-no-single" required>
                     <option value='0'>Seleccione una opción...</option>
                     <?php 
                     foreach ($ListaCategorias as $key => $value) {
@@ -30,6 +30,7 @@
                     }
                     ?>
                 </select>
+                </label><small class="error">La categoria es requerido.</small>
             </div>
              <div class="large-6 columns">
                 <label>Subcategoria</label>
@@ -57,7 +58,7 @@
                     </select>
             </div>
             <div class="large-6 columns">
-                <label>Marca</label>
+                <label>Marca<small>   Requerido</small>
                     <select name="fkMarca" class="chosen-select-no-single">
                         <option value="0" selected>Seleccione una opción...</option>
                     <?php 
@@ -66,36 +67,41 @@
                     }
                     ?>
                     </select>
+               </label><small class="error">La marca es requerida.</small>
             </div>
         </div>
 
         <div class="row">
             <div class="small-3 columns">
-                <label>Precio</label>
+                <label>Precio<small>   Requerido</small>
                 <input type="text" placeholder="000.00" name="precio">
+                </label><small class="error">El precio del producto es requerido.</small>
             </div>
             <div class="small-3 columns">
-                <label>Costo</label>
+                <label>Costo<small>   Requerido</small>
                 <input type="text" placeholder="000.00" name="costo">
+                </label><small class="error">El costo del producto es requerido.</small>
             </div>
            <div class="small-6 columns">
-                <label>Código de barras</label>
+                <label>Código de barras<small>   Requerido</small>
                 <input type="text" placeholder="Codigo de Barras" name="codigoDeBarras">
+                </label><small class="error">El código de barras es requerido.</small>
             </div>
         </div>
 
         <div class="row">
             <div class="small-3 columns">
-                <label>SKU</label>
+                <label>SKU<small>   Requerido</small>
                 <input type="text" placeholder="10" name="sku">
+                </label><small class="error">SKU o número de referencia es requerido.</small>
             </div>
             <div class="small-3 columns">
-                  <label>¿En venta?
+                  <label>¿En venta? </label>
                     <select name="enVenta" class="chosen-select-no-single">
                       <option value="true" selected>Si</option>
                       <option value="false">No</option>
                     </select>
-              </label>
+             
             </div>
             <div class="small-6 columns">
                     <label>Unidad de medida</label>
@@ -113,12 +119,14 @@
 
         <div class="row">
             <div class="large-6 columns">
-                <label>Referencia</label>
+                <label>Referencia<small>   Requerido</small>
                 <input type="text" placeholder="Categoria" name="referencia">
+                </label>
             </div>
             <div class="large-6 columns">
-                <label>Referencia de proveedor</label>
+                <label>Referencia de proveedor<small>   Requerido</small>
                 <input type="text" placeholder="Categoria" name="referencia_proveedor">
+                </label>
             </div>
         </div>
 
@@ -143,12 +151,13 @@
 
         <div class="row">
             <div class="small-3 columns">
-                <label>Fecha de disponibilidad</label>
-                <input type="text" placeholder="Seleccione" id="fecha_disponible" name="fecha_disponible">
+                <label>Fecha de disponibilidad<small>   Requerido</small>
+                <input type="text" placeholder="10-11-2014" id="fecha_disponible" name="fecha_disponible">
+                </label>
             </div>
             <div class="small-3 columns"></div>
             <div class="small-3 columns">
-                  <label>Estatus
+                  <label>Estatus<small>   Requerido</small>
                     <select name="activo" class="chosen-select-no-single">
                       <option value="true" selected>Activo</option>
                       <option value="false">Inactivo</option>
@@ -163,20 +172,31 @@
                 <table id="IMGATACH" class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Agregar Imagen</th>
-                            <th style="text-align: right; "><input type="button" id="agregar" value="+" title="Agregar otra Imagen" style="color: #FFFFFF; border: 1px solid; background-color:#E339A4; border-color:#FFFFFF; " /></th>
+                            <th>Imagen</th>
+                            <th></th>
+                            <th style="{text-align: center; vertical-align: middle}">
+                                <a id="agregar"class="button prefix" style="background-color:rgb(226,5,116);">
+                                    Agregar
+                                </a>
+                            </th>
+                            
                         </tr>
                     </thead>
                     <!-- Cuerpo de la tabla con los campos -->
                     <tbody>
-                    <?php { ?>
                         <!-- fila base para clonar y agregar al final -->
                         <tr class="fila-base">
-                            <td><input type="file" name="IMGS[]"  /></td>
-                            <td class="eliminar" style="text-align: left"><input type="button" value="X" class="button [tiny small large] [radius round]" /></td>
+                            <td>
+                                <a class="button postfix">Cargar
+                                    <input id="fileInput" type="file" class="buttonFile"  name="IMGS[]"/>
+                                    </a>
+                            </td>
+                            <td><input id="inputText" type="text" placeholder="imagen"disabled="true"></input></td>
+                            <td class="eliminar"><input type="button"  value="X" class="button [tiny small large] [radius round]"/>
+                                
+                            </td>
                         </tr>
                         <!-- fin de código: fila base -->
-                    <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -198,16 +218,34 @@
      $(function(){
         // Clona la fila oculta que tiene los campos base, y la agrega al final de la tabla
         $("#agregar").on("click", function(){
-            $("#IMGATACH tbody tr:eq(0)").clone().removeClass("fila-base").appendTo("#IMGATACH tbody");
-        //  alert( $("#tabla tbody").find(":last-child")    );
+            var $input=$("#IMGATACH tbody tr:first").get(0).children[1].children[0].value;
+            if($input!=null && $.trim($input)!=''){
+                $("#IMGATACH tbody tr:eq(0)").clone().removeClass("fila-base").appendTo("#IMGATACH tbody");
+                  $("#IMGATACH tbody tr").get(0).children[1].children[0].value ="";
+                  var $inputText=$("#IMGATACH tbody tr:last").children().get(1).children[0];
+                  $inputText.setAttribute("disabled","true");
+                  var $inputText=$("#IMGATACH tbody tr:last").children().get(0).children[0].remove();
+             }
         });
         
         // Evento que selecciona la fila y la elimina 
         $(document).on("click",".eliminar",function(){
-            var parent = $(this).parents().get(0);
-            $(parent).remove();
+            var rowCount = document.getElementById('IMGATACH').rows.length;
+            rowCount = rowCount-1;
+            if(rowCount>=2){
+                var parent = $(this).parents().get(0);
+                $(parent).remove();
+             }else{
+                $("#IMGATACH tbody tr:last").get(0).children[1].children[0].value ="";
+             }
         });
         
+          $('#fileInput').change(function () {
+            var $parent = $(this).parents().get(2);
+            $parent.children[1].children[0].value = this.value;
+        });
+        
+
     });
 </script>
 

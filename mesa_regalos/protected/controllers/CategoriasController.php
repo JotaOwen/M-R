@@ -15,18 +15,42 @@ class CategoriasController extends Controller {
     }
 
     public function actionCreate() {
-        FB::info($_POST, "____________________POST");
+         FB::info($_POST, "____________________POST");
 
         $model = new Categoria;
-        if (!empty($_POST)) {
+        if(!empty($_POST)){
             $_POST['metas'] = implode(",", $_POST['metas']);
             $model->attributes = $_POST;
             $_POST['activo']=="true" ? $model->activo = 1 : $model->activo = 0;
             $model->fechaDeCreacion = new CDbExpression('NOW()');
             FB::INFO($model->attributes, '_______________________ATTRIBUTES');
-            if ($model->save()) {
-                Yii::app()->user->setFlash("success", "La Categoria se Guardo Correctamente.");
-            } else {
+
+            if ($model->save()){
+                $storeFolder = getcwd() . '\\assets\\images\\categorias\\';
+                FB::info($storeFolder, "storeFolder");
+                if (!is_dir($storeFolder)) 
+                    mkdir($storeFolder, 0777,true);
+                $type = $_FILES['imagen']['type'];
+                $extension = explode('/', $type);
+                if (!empty($_FILES)) {
+                    $tempFile = $_FILES['imagen']['tmp_name'];
+                    $targetPath = $storeFolder;
+                    $nuevoNombre = $model->idCategoria.'_'. $_POST['nuevoNombre'].'.'.$extension[1];
+                    $targetFile = $targetPath . $nuevoNombre;
+                    if (move_uploaded_file($tempFile, $targetFile)) {
+                        FB::info("La imagen ha sido cargada al servidor.", "EXITO-Erasto");
+                             $model->imagen = $nuevoNombre;
+                        FB::info( $model->imagen, "modelo imagen");
+                    }
+                    else {
+                            FB::info("No se guardo al imagen", "error erasto");
+                    }
+                }
+                
+                if ($model->save()) {
+                    Yii::app()->user->setFlash("success", "La Categoria se Guardo Correctamente");
+                }
+            
                 Yii::app()->user->setFlash("warning", "No se pudo guardar la categoria, por favor intente de nuevo.");
             }
         }
