@@ -18,17 +18,6 @@
             <div class="large-6 columns">
                 <label>Tags</label>
                 <input type="text" placeholder="Meta Tags" name="metas">
-                <!-- <select data-placeholder="Seleccione Tags" name="metas[]" _style="width:350px;" multiple class="chosen-select-no-results" tabindex="11">
-                    <option value=""></option>
-                    <option>American Black Bear</option>
-                    <option>Asiatic Black Bear</option>
-                    <option>Brown Bear</option>
-                    <option>Giant Panda</option>
-                    <option>Sloth Bear</option>
-                    <option>Sun Bear</option>
-                    <option>Polar Bear</option>
-                    <option>Spectacled Bear</option>
-                </select> -->
             </div>
         </div>
 

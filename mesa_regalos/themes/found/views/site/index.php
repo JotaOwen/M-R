@@ -1,4 +1,9 @@
 <?php
+
+
+// ubicaciòn:   themes/found/views/site/   
+
+
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
@@ -12,36 +17,46 @@ $this->pageTitle=Yii::app()->name;
 <div class="orbit-container">
     <ul class="example-orbit" data-orbit>
         <li class="" style="z-index: 2; margin-left: 100%;">
-            <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 1">
-            <div class="orbit-caption">
+            <img src="http://192.241.166.215/justo/mesa-r/images/Slider1.jpg" alt="slide 1">
+            <!--<div class="orbit-caption">
                 Caption One.
-            </div>
+            </div>-->
         </li>
         <li class="active" style="z-index: 4; margin-left: 0%;">
-            <img src="http://foundation.zurb.com/docs/assets/img/examples/andromeda-orbit.jpg" alt="slide 2">
-            <div class="orbit-caption">
+            <img src="http://192.241.166.215/justo/mesa-r/images/Slider2.jpg" alt="slide 2">
+            <!--<div class="orbit-caption">
                 Caption Two.
-            </div>
+            </div>-->
         </li>
         <li>
-            <img src="http://foundation.zurb.com/docs/assets/img/examples/launch-orbit.jpg" alt="slide 3">
-            <div class="orbit-caption">
+            <img src="http://192.241.166.215/justo/mesa-r/images/Slider3.jpg" alt="slide 3">
+            <!--<div class="orbit-caption">
                 Caption Three.
-            </div>
+            </div>-->
         </li>
     </ul>
 </div>
 
 
-<div style="height: 30px;"></div>
-<h4 id="block-grid">Catalogo</h4>
-<ul class="small-block-grid-2 large-block-grid-4">
-  <li><img class="th" src="http://foundation.zurb.com/docs/assets/img/examples/comet-th.jpg"></li>
-  <li><img class="th" src="http://foundation.zurb.com/docs/assets/img/examples/launch-th.jpg"></li>
-  <li><img class="th" src="http://foundation.zurb.com/docs/assets/img/examples/space-th.jpg"></li>
-  <li><img class="th" src="http://foundation.zurb.com/docs/assets/img/examples/spacewalk-th.jpg"></li>
-</ul>
+<?php //:::::::::::::::::::::::: CAMBIOS:  Se agregaron las imagenes del slider  ?>
 
+<div style="height: 30px;"></div>
+<h4 id="block-grid">Catálogo</h4>
+<ul class="small-block-grid-2 large-block-grid-4">
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal1.jpg"></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal2.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal3.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal4.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal5.jpg"></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal6.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal8.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal9.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal7.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal10.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal11.jpg""></li>
+  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal12.jpg""></li>
+</ul>
+<?php //:::::::::::::::::::::::::::::: FIN Se agregaron las imagenes del slider  ?>
 
 
 
@@ -59,5 +74,3 @@ $this->pageTitle=Yii::app()->name;
       }
     });
 </script>
-
-

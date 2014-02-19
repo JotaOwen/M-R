@@ -1,27 +1,26 @@
-h5{
+h5.categorias{
 	color:#666666;
 }
 
-#logo {
+#logop {
 	width: 290px;
 	height: 50px;
-	margin-bottom: 50px;
-
-	background-image: url(../images/logo.png);
+	margin-bottom: 5px;
+	background-image: url('../images/logo.png');
 	background-repeat: no-repeat;
 }
 
-#logo img{
+#logop img{
 	
 }
 
-#logo a {
+#logop a {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
-#logo a > span {
+#logop a > span {
 	display: none;
 }
 
@@ -81,11 +80,8 @@ h5{
   height: 0;
 }
 
-span{
+span .obligatorio{
 	color: #fb1706;
-
-
-
 }
 
 #selector{
@@ -104,39 +100,8 @@ span{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.menu 
+/**Menu anterior V1**************************/
+/*.menu 
 { 
 	list-style-type: none;
 	list-style-position: inside;
@@ -154,20 +119,39 @@ span{
         float: left; 
         height: 25px; 
         padding: 0 25px; 
-        color: #999; 
+        color: #666666; 
         text-transform: uppercase; 
         font: bold 12px/25px Arial, Helvetica; 
         text-decoration: none; 
-        text-shadow: 0 1px 0 #000; 
+        /*text-shadow: 0 1px 0 #000;*/
+/*} 
+
+
+
+.menu .cate 
+{ 
+        float: left; 
+        height: 25px; 
+        padding: 0 25px; 
+        color: #666666; 
+        text-transform: uppercase; 
+        font: bold 12px/25px Arial, Helvetica; 
+        text-decoration: none; 
+        /*text-shadow: 0 1px 0 #000;*/
+/*} 
+
+.menu li:hover > a.cate 
+{ 
+        color: #666666; 
 } 
 
 .menu li:hover > a 
-{ 
+{
         color: #fafafa; 
 } 
 
 *html .menu li a:hover /* IE6 */ 
-{ 
+/*{ 
         color: #fafafa; 
 } 
 
@@ -178,7 +162,7 @@ span{
 
 /* Sub-menu */ 
 
-.menu ul 
+/*.menu ul 
 { 
     list-style: none; 
     margin: 0; 
@@ -188,15 +172,15 @@ span{
     top: 35px; 
     left: 0; 
     z-index: 99999; 
-    background: #444; 
-    background: -moz-linear-gradient(#444, #111); 
-    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444)); 
-    background: -webkit-linear-gradient(#444, #111); 
-    background: -o-linear-gradient(#444, #111); 
-    background: -ms-linear-gradient(#444, #111); 
-    background: linear-gradient(#444, #111); 
-    -moz-border-radius: 5px; 
-    border-radius: 5px; 
+    background: #f67085; 
+    background: -moz-linear-gradient(#f67085, #f2445f); 
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #f67085),color-stop(1, #f2445f)); 
+    background: -webkit-linear-gradient(#f67085, #f2445f); 
+    background: -o-linear-gradient(#f67085, #f2445f); 
+    background: -ms-linear-gradient(#f67085, #f2445f); 
+    background: linear-gradient(#f67085, #f2445f); 
+    -moz-border-radius: 2px; 
+    border-radius: 2px; 
 } 
 
 .menu ul li 
@@ -205,9 +189,9 @@ span{
     margin: 0; 
     padding: 0; 
     display: block; 
-    -moz-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777; 
-    -webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777; 
-    box-shadow: 0 1px 0 #111111, 0 2px 0 #777777; 
+    -moz-box-shadow: 0 1px 0 #f67085, 0 2px 0 #f67085 
+    -webkit-box-shadow: 0 1px 0 #f67085, 0 2px 0 #f67085; 
+    box-shadow: 0 1px 0 #f67085 0 2px 0 #f67085; 
 } 
 
 .menu ul li:last-child 
@@ -229,32 +213,33 @@ span{
 } 
 
 *html .menu ul a /* IE6 */ 
-{ 
+/*{ 
         height: 10px; 
         width: 150px; 
 } 
 
 *:first-child+html .menu ul a /* IE7 */ 
-{ 
+/*{ 
         height: 10px; 
         width: 150px; 
 } 
 
 .menu ul a:hover 
 { 
-    background: #0186ba; 
-        background: -moz-linear-gradient(#04acec,  #0186ba); 
-        background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba)); 
-        background: -webkit-linear-gradient(#04acec,  #0186ba); 
-        background: -o-linear-gradient(#04acec,  #0186ba); 
-        background: -ms-linear-gradient(#04acec,  #0186ba); 
-        background: linear-gradient(#04acec,  #0186ba); 
+    background: #f2445f; 
+        background: -moz-linear-gradient(#f67085,  #f2445f); 
+        background: -webkit-gradient(linear, left top, left bottom, from(#f67085), to(#f2445f)); 
+        background: -webkit-linear-gradient(#f67085,  #f2445f); 
+        background: -o-linear-gradient(#f67085,  #f2445f); 
+        background: -ms-linear-gradient(#f67085,  #f2445f); 
+        background: linear-gradient(#f67085,  #f2445f); 
 } 
 
 .menu ul li:first-child a 
 { 
-    -moz-border-radius: 5px 5px 0 0; 
-    border-radius: 5px 5px 0 0; 
+    -moz-border-radius: 2px 2px 0 0; 
+    border-radius: 2px 2px 0 0; 
+    
 } 
 
 .menu ul li:first-child a:after 
@@ -267,12 +252,12 @@ span{
     height: 0; 
     border-left: 5px solid transparent; 
     border-right: 5px solid transparent; 
-    border-bottom: 8px solid #444; 
+    border-bottom: 8px solid #f2445f); 
 } 
 
 .menu ul li:first-child a:hover:after 
 { 
-    border-bottom-color: #04acec; 
+    border-bottom-color: #f2445f); 
 } 
 
 .menu ul li:last-child a 
@@ -282,7 +267,7 @@ span{
 } 
 
 /* Clear floated elements */ 
-.menu:after 
+/*.menu:after 
 { 
         visibility: hidden; 
         display: block; 
@@ -293,9 +278,9 @@ span{
 } 
 
 * html .menu             { zoom: 1; } /* IE6 */ 
-*:first-child+html .menu { zoom: 1; } /* IE7 */ 
+/**:first-child+html .menu { zoom: 1; } /* IE7 */ 
 
-.menu ul li:first-child a:after 
+/*.menu ul li:first-child a:after 
 { 
     content: ''; 
     position: absolute; 
@@ -305,10 +290,156 @@ span{
     height: 0; 
     border-left: 5px solid transparent; 
     border-right: 5px solid transparent; 
-    border-bottom: 8px solid #444; 
+    border-bottom: 8px solid #f2445f); 
 } 
 
 .menu ul li:first-child a:hover:after 
 { 
-    border-bottom-color: #04acec; 
-} 
+    border-bottom-color: #f67085; 
+} */
+/**Menu anterior V1**************************/
+
+
+
+
+
+/****STYLE MENU RESPONSIVO ***********************************/
+
+/* WIDTH SETTING */
+
+.nav-hold{
+	width:95%;
+	max-width:1000px;	
+	margin:0 auto;
+}
+
+
+/* NAVIGATION */
+
+.textmenu{
+	display: none;
+}
+
+.nav-bar {
+
+/*	width:100%;*/
+	width:100%;
+/*	margin: 0 auto;*/
+	background: #f67085; /* Old browsers */
+background: -moz-linear-gradient(top,  #f67085 0%, #f2445f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f67085), color-stop(100%,#f2445f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f67085 0%,#f2445f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f67085 0%,#f2445f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f67085 0%,#f2445f 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f67085 0%,#f2445f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f67085', endColorstr='#f2445f',GradientType=0 ); /* IE6-9 */
+
+}
+.nav-hold {
+	overflow:hidden;
+}
+
+.nav-list {
+	
+}
+
+.nav-list {
+	list-style: none;
+	margin-bottom: 0;
+	float:left;
+}
+
+
+
+.nav-list li {
+	float:left;
+	
+}
+.nav-list li a {
+	display:block;
+	padding:10px 15px;
+	color:#f9f9f9;
+}
+
+
+.nav-list li a:hover {
+		
+		background: #f2445f;
+}
+
+.nav-menu {
+	display:none;
+}
+
+
+
+
+
+/*Media query*/
+
+
+@media screen and (max-width:767px) {
+
+
+.container p {
+		columns:1;
+		-webkit-columns:1;
+		-moz-columns:1;
+		-o-columns:1;
+		-ms-columns:1;
+	}
+	/* NAV MQ _ MOBILE */
+	
+	.textmenu{
+		float:left;
+		color:#f9f9f9;
+		display:block;
+		padding:10px 0 0 10px;
+	}
+	
+	.nav-menu {
+		float:right;
+		color:#f9f9f9;
+		display:block;
+		padding:15px 10px; /*Alto menu responsivo*/
+	}
+	
+	
+	ul{
+		margin-bottom: 0;
+	}
+	.nav-list {
+		display:none;
+		
+	}
+	.nav-open {
+		float:left;
+		width:100%;
+		display:block;
+	}
+	.nav-list li {
+		width:100%;
+	}
+	.nav-list li a {
+		display:block;
+		padding:10px 10px; /*Interlineado opciones menu*/
+		color:#f9f9f9;
+		width:100%;
+	}
+	
+	
+	.nav-list li a:hover {
+		color:#fafafa;
+		background: #f2445f;
+	}
+
+
+
+/****STYLE MENU RESPONSIVO ***********************************/
+
+
+
+
+
+
+
