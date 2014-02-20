@@ -19,15 +19,15 @@
             Nueva Categoria
         </legend>
         <div class="row">
-            <div class="large-6 columns">
-                <label>Nombre<small>   Requerido</small>
-                    <input type="text" placeholder="Categoria" name="nombre" required pattern="[a-zA-Z]+">
+            <div class="small-6 columns">
+                <label>Nombre<small>Requerido</small>
+                    <input type="text" placeholder="Categoria" name="nombre" required>
                 </label><small class="error">El nombre de la categoría es requerido.</small>
             </div>
 
-            <div class="large-6 columns">
+            <div class="small-6 columns">
                 <label>Tags</label>
-                <select data-placeholder="Seleccione Tags" name="metas[]" _style="width:350px;" multiple class="chosen-select-no-results" tabindex="11">
+                <select data-placeholder="Seleccione Tags" name="metas[]"  multiple class="chosen-select-no-results" tabindex="11">
                     <option value=""></option>
                     <option>American Black Bear</option>
                     <option>Asiatic Black Bear</option>
@@ -42,38 +42,40 @@
         </div>
 
         <div class="row">
-            <div class="large-3 columns">
+            <div class="small-6 columns">
                 <label>Imagen</label>
                 <div class="row collapse">
                     <div class="small-9 columns">
                         <input id="fileInputText" disabled="true" type="text" placeholder="Selecciona imagen" >
                     </div>
-                    <div class="large-3 columns">
+                    <div class="small-3 columns">
                            <a class="button postfix">Cargar
                            <input id="fileInput" type="file" class="buttonFile" name="imagen"/></a>
                     </div>
                 </div>
             </div>
-            <div class="small-3 columns">
+            <div class="small-6 columns">
                 <label>Nuevo nombre</label>
                  <div class="row collapse">
                     <div class="small-9 columns">
                        <input type="text" id="nuevoNombre" placeholder="imagen" name="nuevoNombre" value="">
                     </div>
-                    <div class="large-3 columns">
+                    <div class="small-3 columns">
                            <a id="ext" class="button postfix">.jpg</a>
                     </div>
                 </div>
                 
             </div>
-            <div class="small-3 columns">
+        </div>
+        <div class="row">
+            <div class="small-6 columns">
                 <label>Posición</label>
                 <input type="text" placeholder="10" name="posicion" value="">
             </div>
             
 
-            <div class="small-3 columns">
-                <label>Estatus<small>   Requerido</small>
+            <div class="small-6 columns">
+                <label>Estatus
                     <select name="activo">
                         <option value="true" selected>Activo</option>
                         <option value="false">Inactivo</option>
@@ -82,7 +84,7 @@
         </div>
 
         <div class="row">
-            <div class="large-12 columns">
+            <div class="small-12 columns">
                 <input type="submit" class="button [tiny small large]" value="Guardar" />
             </div>
         </div>

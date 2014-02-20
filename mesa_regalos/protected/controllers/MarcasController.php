@@ -5,8 +5,8 @@ class MarcasController extends Controller {
     public $layout = '//layouts/admin';
 
     public function actionIndex() {
-
-        $this->render('index');
+        $BrandsData = Yii::app()->db->createCommand()->select(' * ')->from('marca')->queryAll();
+        $this->render('index', array('BrandsData' => $BrandsData));
     }
 
     public function actionForms() {

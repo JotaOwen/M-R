@@ -74,9 +74,9 @@ array(
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Img</th>
+            <!--th>Img</th>
             <th>Marca</th>
-            <th>Categoria</th>
+            <th>Categoria</th-->
             <th>Costo</th>
             <th>Precio</th>
             <th>Acciones</th>
@@ -87,9 +87,9 @@ array(
         <tr>
             <td><?php echo $Data['idProducto']; ?></td>
             <td><?php echo $Data['nombre']; ?></td>
-            <td><?php echo $Data['imagen']; ?></td>
+            <!--td><?php echo $Data['imagen']; ?></td>
             <td><?php echo $ListaMarcas[$Data['fkMarca']]; ?></td>
-            <td><?php echo $ListaCategorias[$Data['fkCategoria']]; ?></td>
+            <td><?php echo $ListaCategorias[$Data['fkCategoria']]; ?></td-->
             <td class="price"><?php echo $Data['costo']; ?></td>
             <td class="price"><?php echo $Data['precio']; ?></td>
             <td>

@@ -4,8 +4,8 @@ class SubcategoriasController extends Controller {
 
     public $layout = '//layouts/admin';
     public function actionIndex() {
-
-        $this->render('index');
+        $SubcategoriesData = Yii::app()->db->createCommand()->select(' * ')->from('subcategoria')->queryAll();
+        $this->render('index', array('SubcategoriesData' => $SubcategoriesData));
     }
 
     public function actionCreate() {

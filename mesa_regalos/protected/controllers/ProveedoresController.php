@@ -1,10 +1,10 @@
 <?php
 
 class ProveedoresController extends Controller {
-
+    public $layout = '//layouts/admin';
     public function actionIndex() {
-
-        $this->render('index');
+        $ProvidersData = Yii::app()->db->createCommand()->select(' * ')->from('proveedor')->queryAll();
+        $this->render('index', array('ProvidersData' => $ProvidersData));
     }
 
     public function actionCreate() {

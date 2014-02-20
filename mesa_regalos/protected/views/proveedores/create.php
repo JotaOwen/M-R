@@ -14,7 +14,7 @@
         </legend>
         <input type="hidden" name="idProveedor" value=""/>
         <div class="row">
-            <div class="large-9 columns">
+            <div class="small-9 columns">
                 <label>Nombre</label>
                 <input type="text" placeholder="Categoria" name="nombre">
             </div>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="row">
-            <div class="large-12 columns">
+            <div class="small-12 columns">
                 <input type="submit" class="button [radius round]" value="Guardar" />
             </div>
         </div>

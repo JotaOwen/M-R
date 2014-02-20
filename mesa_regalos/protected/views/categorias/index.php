@@ -101,9 +101,9 @@
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Img</th>
+            <!--th>Img</th-->
             <th>Posicion</th>
-            <th>Creado</th>
+            <!--th>Creado</th-->
             <th>Actions</th>
         </tr>
     </thead>
@@ -112,9 +112,9 @@
         <tr id="<?php echo $Data['idCategoria']; ?>">
             <td><?php echo $Data['idCategoria']; ?></td>
             <td><?php echo $Data['nombre']; ?></td>
-            <td><?php echo $Data['imagen']; ?></td>
+            <!--td><?php echo $Data['imagen']; ?></td-->
             <td><?php echo $Data['posicion']; ?></td>
-            <td><?php echo $Data['fechaDeCreacion']; ?></td>
+            <!--td><?php echo $Data['fechaDeCreacion']; ?></td-->
             <td>
                 <a name="OpenEditModal" id="<?=$Data['idCategoria']?>" nombre="<?=$Data['nombre']?>" posicion="<?=$Data['posicion']?>" >
                     <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/pencil.png" data-tooltip class="has-tip"  title="Editar Categoria" />

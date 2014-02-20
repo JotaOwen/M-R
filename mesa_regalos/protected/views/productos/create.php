@@ -13,15 +13,15 @@
         <input type="hidden" name="idProducto" value=""/>
         <div class="row">
             <div class="large-12 columns">
-                <label>Nombre<small>   Requerido</small>
+                <label>Nombre<small>Requerido</small>
                 <input type="text" placeholder="Nombre del Producto" name="nombre" required>
                 </label><small class="error">El nombre del producto es requerido.</small>
             </div>
         </div>
 
         <div class="row">
-             <div class="large-6 columns">
-                <label>Categoria<small>   Requerido</small>
+             <div class="small-12 columns">
+                <label>Categoria<small>Requerido</small>
                 <select name='fkCategoria' class="chosen-select-no-single" required>
                     <option value='0'>Seleccione una opción...</option>
                     <?php 
@@ -32,7 +32,7 @@
                 </select>
                 </label><small class="error">La categoria es requerido.</small>
             </div>
-             <div class="large-6 columns">
+             <div class="small-12 columns">
                 <label>Subcategoria</label>
                     <select name="fkSubcategoria" class="chosen-select-no-single">
                         <option value="0">Seleccione una opción...</option>
@@ -58,7 +58,7 @@
                     </select>
             </div>
             <div class="large-6 columns">
-                <label>Marca<small>   Requerido</small>
+                <label>Marca<small>Requerido</small>
                     <select name="fkMarca" class="chosen-select-no-single">
                         <option value="0" selected>Seleccione una opción...</option>
                     <?php 
@@ -70,40 +70,41 @@
                </label><small class="error">La marca es requerida.</small>
             </div>
         </div>
-
-        <div class="row">
-            <div class="small-3 columns">
-                <label>Precio<small>   Requerido</small>
-                <input type="text" placeholder="000.00" name="precio">
-                </label><small class="error">El precio del producto es requerido.</small>
+         <div class="row">
+            <div class="large-6 columns">
+                <label>Referencia<small>Requerido</small>
+                <input type="text" placeholder="Categoria" name="referencia">
+                </label>
             </div>
-            <div class="small-3 columns">
-                <label>Costo<small>   Requerido</small>
-                <input type="text" placeholder="000.00" name="costo">
-                </label><small class="error">El costo del producto es requerido.</small>
-            </div>
-           <div class="small-6 columns">
-                <label>Código de barras<small>   Requerido</small>
-                <input type="text" placeholder="Codigo de Barras" name="codigoDeBarras">
-                </label><small class="error">El código de barras es requerido.</small>
+            <div class="large-6 columns">
+                <label>Referencia de proveedor<small>Requerido</small>
+                <input type="text" placeholder="Categoria" name="referencia_proveedor">
+                </label>
             </div>
         </div>
 
         <div class="row">
             <div class="small-3 columns">
-                <label>SKU<small>   Requerido</small>
-                <input type="text" placeholder="10" name="sku">
-                </label><small class="error">SKU o número de referencia es requerido.</small>
+                <label>Precio<small>Requerido</small>
+                <input type="text" placeholder="000.00" name="precio">
+                </label><small class="error">El precio del producto es requerido.</small>
             </div>
             <div class="small-3 columns">
-                  <label>¿En venta? </label>
-                    <select name="enVenta" class="chosen-select-no-single">
-                      <option value="true" selected>Si</option>
-                      <option value="false">No</option>
-                    </select>
-             
+                <label>Costo<small>Requerido</small>
+                <input type="text" placeholder="000.00" name="costo">
+                </label><small class="error">El costo del producto es requerido.</small>
             </div>
-            <div class="small-6 columns">
+
+           <div class="small-6 columns">
+                <label>Código de barras<small>Requerido</small>
+                <input type="text" placeholder="Codigo de Barras" name="codigoDeBarras">
+                </label><small class="error">El código de barras es requerido.</small>
+            </div>
+            
+        </div>
+
+        <div class="row">
+             <div class="small-6 columns">
                     <label>Unidad de medida</label>
                     <select name="fkUnidadMedida" class="chosen-select-no-single">
                         <option value="0" selected>Seleccione una opción...</option>
@@ -114,22 +115,23 @@
                     ?>
                     </select>
             </div>
+            <div class="small-3 columns">
+                <label>SKU<small>Requerido</small>
+                <input type="text" placeholder="10" name="sku">
+                </label><small class="error">SKU o número de referencia es requerido.</small>
+            </div>
+            <div class="small-3 columns">
+                  <label>¿En venta?</label>
+                    <select name="enVenta" class="chosen-select-no-single">
+                      <option value="true" selected>Si</option>
+                      <option value="false">No</option>
+                    </select>
+            </div>
+           
             <input type="hidden" name="esVirtual" value="false"/>
         </div>
 
-        <div class="row">
-            <div class="large-6 columns">
-                <label>Referencia<small>   Requerido</small>
-                <input type="text" placeholder="Categoria" name="referencia">
-                </label>
-            </div>
-            <div class="large-6 columns">
-                <label>Referencia de proveedor<small>   Requerido</small>
-                <input type="text" placeholder="Categoria" name="referencia_proveedor">
-                </label>
-            </div>
-        </div>
-
+       
         <div class="row">
             <div class="small-3 columns">
                 <label>Ancho</label>
@@ -150,25 +152,26 @@
         </div>
 
         <div class="row">
-            <div class="small-3 columns">
-                <label>Fecha de disponibilidad<small>   Requerido</small>
+            <div class="small-6 columns">
+                <label>Fecha de disponibilidad<small>Requerido</small>
                 <input type="text" placeholder="10-11-2014" id="fecha_disponible" name="fecha_disponible">
                 </label>
             </div>
             <div class="small-3 columns"></div>
+            
             <div class="small-3 columns">
-                  <label>Estatus<small>   Requerido</small>
+                  <label>Estatus<small>Requerido</small>
                     <select name="activo" class="chosen-select-no-single">
                       <option value="true" selected>Activo</option>
                       <option value="false">Inactivo</option>
                     </select>
               </label>
             </div>
-            <div class="small-3 columns"></div>
+            
         </div>
 
         <div class="row">
-            <div class="small-6 columns">
+            <div class="small-12 columns">
                 <table id="IMGATACH" class="table table-striped table-hover">
                     <thead>
                         <tr>
@@ -203,7 +206,10 @@
         </div>
         
         <div class="row">
-            <div class="large-12 columns">
+            <div class="small-3 columns"></div>
+            <div class="small-3 columns"></div>
+            <div class="small-3 columns"></div>
+            <div class="large-3 columns">
                 <input type="submit" class="button [radius round]" value="Guardar" />
             </div>
         </div>
