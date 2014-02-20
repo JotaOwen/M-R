@@ -43,7 +43,16 @@ $this->pageTitle=Yii::app()->name;
 <div style="height: 30px;"></div>
 <h4 id="block-grid">Catálogo</h4>
 <ul class="small-block-grid-2 large-block-grid-4">
-  <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal1.jpg"></li>
+  <li>
+      <figure class="th">
+          <img  src="http://192.241.166.215/justo/mesa-r/images/gal1.jpg">
+          <figcaption>
+              <label>Nombre de Producto</label>
+              <p>descripcion</p>
+              <input type="button" value="Agregar">
+          </figcaption>
+      </figure>
+  </li>
   <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal2.jpg""></li>
   <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal3.jpg""></li>
   <li><img class="th" src="http://192.241.166.215/justo/mesa-r/images/gal4.jpg""></li>
